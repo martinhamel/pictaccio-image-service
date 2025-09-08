@@ -1,4 +1,4 @@
-import { UserInfo, UserStatus } from '@pictaccio/image-service/src/database/models/public_user';
+import { UserInfo, UserStatus } from '../database/models/public_user';
 
 export interface UserInterface {
     id: string;

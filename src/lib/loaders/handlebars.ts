@@ -2,9 +2,9 @@ import { Express } from 'express'
 import { create as createExpressHandlebars } from 'express-handlebars';
 import { create as createHandlebars } from 'handlebars';
 import { Container } from 'typedi';
-import { ConfigSchema } from '@pictaccio/image-service/src/core/config_schema';
-import { LoaderInterface } from '@pictaccio/image-service/src/lib/bootstrap';
-import { Collection } from '@pictaccio/image-service/src/lib/core/collection';
+import { ConfigSchema } from '../../core/config_schema';
+import { LoaderInterface } from '../../lib/bootstrap';
+import { Collection } from '../../lib/core/collection';
 
 export const handlebarsLoader: LoaderInterface = async (): Promise<any> => {
     const config = Container.get<ConfigSchema>('config');

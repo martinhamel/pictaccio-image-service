@@ -1,7 +1,7 @@
 import { BaseEntity, Column, CreateDateColumn, Entity, LessThan, PrimaryGeneratedColumn } from 'typeorm';
 import moment from 'moment';
 import { Container } from 'typedi';
-import { ConfigSchema } from '@pictaccio/image-service/src/core/config_schema';
+import { ConfigSchema } from '../../core/config_schema';
 
 const config = Container.get<ConfigSchema>('config');
 

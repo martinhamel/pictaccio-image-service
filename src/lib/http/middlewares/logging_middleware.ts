@@ -1,9 +1,9 @@
 import { NextFunction, Response } from 'express';
 import { ExpressMiddlewareInterface, Middleware } from '@loufa/routing-controllers';
 import { Service } from 'typedi';
-import { logger } from '@pictaccio/image-service/src/lib/core/logger';
-import { httpCommonFields } from '@pictaccio/image-service/src/lib/core/logger_common';
-import { Request } from '@pictaccio/image-service/src/lib/core/request';
+import { logger } from '../../../lib/core/logger';
+import { httpCommonFields } from '../../../lib/core/logger_common';
+import { Request } from '../../../lib/core/request';
 
 /**
  * This logs all the requests the application handles

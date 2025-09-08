@@ -1,4 +1,4 @@
-import { PublicUser } from '@pictaccio/image-service/src/database/models/public_user';
+import { PublicUser } from '../database/models/public_user';
 
 export default (async function (): Promise<void> {
     let users;

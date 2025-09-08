@@ -1,5 +1,5 @@
-import { createPromiseTimeout } from '@pictaccio/image-service/src/lib/core/utils';
-import { LoaderError } from '@pictaccio/image-service/src/lib/errors/loader_error';
+import { createPromiseTimeout } from '../../lib/core/utils';
+import { LoaderError } from '../../lib/errors/loader_error';
 
 type Offers = { [index: string]: (...args: any[]) => unknown }
 type WaitingOnOffers = [{ valueName: string, args: any[], resolve: (value: any) => void, reject: (value: any) => void }];

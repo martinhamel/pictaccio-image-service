@@ -4,22 +4,22 @@ import { Authorized, Body, Get, JsonController, Param, Post, Req, Res, ViewRende
 import { TFunction } from 'i18next';
 import { join } from 'path';
 import { Inject, Service } from 'typedi';
-import { Request } from '@pictaccio/image-service/src/lib/core/request';
-import { MailerItem, MailerInterface } from '@pictaccio/image-service/src/core/mailer_interface';
+import { Request } from '../../lib/core/request';
+import { MailerItem, MailerInterface } from '../../core/mailer_interface';
 import {
     DataTable,
     DataTableCreateRequest,
     DataTableDeleteRequest,
     DataTableReadRequest,
     DataTableUpdateRequest
-} from '@pictaccio/image-service/src/lib/database/helpers/data_table';
-import { PublicUser } from '@pictaccio/image-service/src/database/models/public_user';
-import { T } from '@pictaccio/image-service/src/lib/http/decorators/t';
-import { View } from '@pictaccio/image-service/src/lib/http/view/view';
-import { DataTableCreateBaseRequestRaw } from '@pictaccio/image-service/src/lib/http/requests/data_table_create_base_request';
-import { DataTableReadBaseRequest } from '@pictaccio/image-service/src/lib/http/requests/data_table_read_base_request';
-import { DataTableUpdateBaseRequest } from '@pictaccio/image-service/src/lib/http/requests/data_table_update_base_request';
-import { DataTableDeleteBaseRequest } from '@pictaccio/image-service/src/lib/http/requests/data_table_delete_base_request';
+} from '../../lib/database/helpers/data_table';
+import { PublicUser } from '../../database/models/public_user';
+import { T } from '../../lib/http/decorators/t';
+import { View } from '../../lib/http/view/view';
+import { DataTableCreateBaseRequestRaw } from '../../lib/http/requests/data_table_create_base_request';
+import { DataTableReadBaseRequest } from '../../lib/http/requests/data_table_read_base_request';
+import { DataTableUpdateBaseRequest } from '../../lib/http/requests/data_table_update_base_request';
+import { DataTableDeleteBaseRequest } from '../../lib/http/requests/data_table_delete_base_request';
 
 @Service()
 @JsonController()

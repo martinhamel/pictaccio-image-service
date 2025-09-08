@@ -1,7 +1,7 @@
 import { join } from 'node:path';
 import * as path from 'path';
-import { ConfigSchema } from '@pictaccio/image-service/src/core/config_schema';
-import { formatPEMString, getApiServerVersion } from '@pictaccio/image-service/src/lib/core/utils';
+import { ConfigSchema } from './core/config_schema';
+import { formatPEMString, getApiServerVersion } from './lib/core/utils';
 
 let version = '';
 export const config: ConfigSchema = {

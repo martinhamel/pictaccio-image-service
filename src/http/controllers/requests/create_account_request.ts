@@ -1,8 +1,8 @@
-import { IsNotEmpty, IsEmail } from '@loufa/class-validator';
+import { IsNotEmpty, IsEmail } from 'class-validator';
 import { Container } from 'typedi';
-import { ConfigSchema } from '@pictaccio/image-service/src/core/config_schema';
-import { ArrayIncludes } from '@pictaccio/image-service/src/lib/http/validators/array_includes';
-import { Password } from '@pictaccio/image-service/src/lib/http/validators/password';
+import { ConfigSchema } from '../../../core/config_schema';
+import { ArrayIncludes } from '../../../lib/http/validators/array_includes';
+import { Password } from '../../../lib/http/validators/password';
 
 const config = Container.get<ConfigSchema>('config');
 

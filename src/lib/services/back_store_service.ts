@@ -9,10 +9,10 @@ import {
     SetCallback,
     StoreInterface,
     TouchCallback
-} from '@pictaccio/image-service/src/core/store_interface';
-import { ConfigSchema } from '@pictaccio/image-service/src/core/config_schema';
-import { logger } from '@pictaccio/image-service/src/lib/core/logger';
-import { RedisService } from '@pictaccio/image-service/src/lib/services/redis_service';
+} from '../../core/store_interface';
+import { ConfigSchema } from '../../core/config_schema';
+import { logger } from '../../lib/core/logger';
+import { RedisService } from '../../lib/services/redis_service';
 
 const PREFIX = 'pictaccio-backstore-';
 const SESSION_PROPERTY = '_pictaccio';

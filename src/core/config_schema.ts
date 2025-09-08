@@ -1,4 +1,4 @@
-import { ClientConfigInterface } from '@pictaccio/image-service/src/core/common/client_config_interface';
+import { ClientConfigInterface } from '../core/common/client_config_interface';
 
 export interface ConfigSchema {
     env: {

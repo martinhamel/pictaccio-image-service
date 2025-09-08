@@ -1,4 +1,4 @@
-import { Request } from '@pictaccio/image-service/src/lib/core/request';
+import { Request } from '../../lib/core/request';
 
 export interface HttpCommonFieldsInterface {
     access_granted: boolean;

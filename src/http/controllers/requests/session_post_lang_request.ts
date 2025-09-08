@@ -1,4 +1,4 @@
-import { IsLocale } from '@loufa/class-validator';
+import { IsLocale } from 'class-validator';
 
 export class SessionPostLangRequest {
     @IsLocale()

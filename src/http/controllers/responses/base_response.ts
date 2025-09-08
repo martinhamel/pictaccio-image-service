@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsIn, IsUUID } from '@loufa/class-validator';
+import { IsNotEmpty, IsIn, IsUUID } from 'class-validator';
 
 export class BaseResponse {
     @IsIn(['ok', 'failed', 'error'])

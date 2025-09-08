@@ -1,7 +1,7 @@
 import { Action, createParamDecorator } from 'routing-controllers';
 import { Container } from 'typedi';
-import { ConfigSchema } from '@pictaccio/image-service/src/core/config_schema';
-import { getFixedT } from '@pictaccio/image-service/src/lib/loaders/i18next';
+import { ConfigSchema } from '../../../core/config_schema';
+import { getFixedT } from '../../../lib/loaders/i18next';
 
 const config: ConfigSchema = Container.get<ConfigSchema>('config');
 

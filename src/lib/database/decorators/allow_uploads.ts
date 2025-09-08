@@ -1,4 +1,4 @@
-import { getMetadata } from '@pictaccio/image-service/src/lib/database/decorators/metadata';
+import { getMetadata } from '../../../lib/database/decorators/metadata';
 
 export class UploadOptions {
     public multiple?: boolean;

@@ -2,12 +2,12 @@ import { promises as fsPromises, Stats } from 'fs';
 import path from 'path';
 import { Container } from 'typedi';
 import { isMainThread, parentPort, threadId } from 'worker_threads';
-import { ConfigSchema } from '@pictaccio/image-service/src/core/config_schema';
-import { bootstrap } from '@pictaccio/image-service/src/lib/bootstrap';
-import { logger } from '@pictaccio/image-service/src/lib/core/logger';
-import { typediLoader } from '@pictaccio/image-service/src/lib/loaders/typedi';
-import { configLoader } from '@pictaccio/image-service/src/lib/loaders/config';
-import { typeormLoader } from '@pictaccio/image-service/src/lib/loaders/typeorm';
+import { ConfigSchema } from '../../core/config_schema';
+import { bootstrap } from '../../lib/bootstrap';
+import { logger } from '../../lib/core/logger';
+import { typediLoader } from '../../lib/loaders/typedi';
+import { configLoader } from '../../lib/loaders/config';
+import { typeormLoader } from '../../lib/loaders/typeorm';
 
 type JobCacheItem = {
     callable: () => void

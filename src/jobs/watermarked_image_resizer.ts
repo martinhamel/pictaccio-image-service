@@ -1,7 +1,7 @@
-import { config } from '@pictaccio/image-service/src/config';
-import { logger } from '@pictaccio/image-service/src/lib/core/logger';
-import { WatermarkedImageResizeItem } from '@pictaccio/shared/src/types/watermarked_image_resize_item';
-import { computeThumbnailOutputFileName } from '@pictaccio/shared/src/utils/compute_thumbnail_output_filename';
+import { config } from '../config';
+import { logger } from '../lib/core/logger';
+import { WatermarkedImageResizeItem } from '@pictaccio/shared/types/watermarked_image_resize_item';
+import { computeThumbnailOutputFileName } from '@pictaccio/shared/utils/compute_thumbnail_output_filename';
 import { join } from 'node:path';
 import { parentPort } from 'node:worker_threads';
 import sharp from 'sharp';

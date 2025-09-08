@@ -3,21 +3,21 @@ import express, { urlencoded } from 'express';
 import fileUploads from 'express-fileupload';
 import session from 'express-session';
 /*import { promises as fsPromises } from 'fs';
-import { createServer } from '@pictaccio/image-service/src/https';*/
+import { createServer } from '../../https';*/
 import { Container } from 'typedi';
 import { Action, useExpressServer } from '@loufa/routing-controllers';
-import { ConfigSchema } from '@pictaccio/image-service/src/core/config_schema';
-import { UserInterface } from '@pictaccio/image-service/src/core/user_interface';
-import { LoaderInterface } from '@pictaccio/image-service/src/lib/bootstrap';
-import { Collection } from '@pictaccio/image-service/src/lib/core/collection';
-import { logger } from '@pictaccio/image-service/src/lib/core/logger';
-import { View } from '@pictaccio/image-service/src/lib/http/view/view';
-import '@pictaccio/image-service/src/lib/services/auth_service';
-import { AuthService } from '@pictaccio/image-service/src/lib/services/auth_service';
-import '@pictaccio/image-service/src/lib/services/back_store_service';
-import '@pictaccio/image-service/src/lib/services/redis_service';
-import type { RbacService } from '@pictaccio/image-service/src/lib/services/rbac_service';
-import { config } from '@pictaccio/image-service/src/config';
+import { ConfigSchema } from '../../core/config_schema';
+import { UserInterface } from '../../core/user_interface';
+import { LoaderInterface } from '../../lib/bootstrap';
+import { Collection } from '../../lib/core/collection';
+import { logger } from '../../lib/core/logger';
+import { View } from '../../lib/http/view/view';
+import '../../lib/services/auth_service';
+import { AuthService } from '../../lib/services/auth_service';
+import '../../lib/services/back_store_service';
+import '../../lib/services/redis_service';
+import type { RbacService } from '../../lib/services/rbac_service';
+import { config } from '../../config';
 
 type Operation = 'create:any' | 'read:any' | 'update:any' | 'delete:any' |
     'create:own' | 'read:own' | 'update:own' | 'delete:own';

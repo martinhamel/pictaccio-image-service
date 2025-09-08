@@ -1,6 +1,6 @@
 import { join } from 'path';
 import { Container } from 'typedi';
-import { ConfigSchema } from '@pictaccio/image-service/src/core/config_schema';
+import { ConfigSchema } from '../../../../core/config_schema';
 
 type PathKind =
     'img' |

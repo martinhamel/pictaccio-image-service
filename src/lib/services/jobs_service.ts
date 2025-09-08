@@ -1,9 +1,9 @@
-import { ConfigSchema } from '@pictaccio/image-service/src/core/config_schema';
+import { ConfigSchema } from '../../core/config_schema';
 import { join } from 'node:path';
 import { Worker } from 'node:worker_threads';
 import { Serializable, fork } from 'node:child_process';
 import { Inject, Service } from 'typedi';
-import { config } from '@pictaccio/image-service/src/config';
+import { config } from '../../config';
 
 let count = 0;
 

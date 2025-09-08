@@ -1,6 +1,6 @@
 import { BaseEntity, Column, CreateDateColumn, Entity, LessThan, PrimaryGeneratedColumn } from 'typeorm';
 import moment from 'moment';
-import { config } from '@pictaccio/image-service/src/config';
+import { config } from '../../config';
 
 @Entity({ name: 'reset', schema: 'public' })
 export class PublicReset extends BaseEntity {

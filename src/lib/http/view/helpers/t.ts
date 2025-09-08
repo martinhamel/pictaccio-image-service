@@ -1,4 +1,4 @@
-import { SLOT_T } from '@pictaccio/image-service/src/lib/http/view/view';
+import { SLOT_T } from '../../../../lib/http/view/view';
 
 export default function t(key: string, options): string {
     const t = options.data.root.__internals__[SLOT_T];

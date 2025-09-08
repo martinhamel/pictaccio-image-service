@@ -11,10 +11,10 @@ import {
     Session
 } from '@loufa/routing-controllers';
 import { Inject, Service } from 'typedi';
-import { logger } from '@pictaccio/image-service/src/lib/core/logger';
-import { httpCommonFields } from '@pictaccio/image-service/src/lib/core/logger_common';
-import { Request } from '@pictaccio/image-service/src/lib/core/request';
-import '@pictaccio/image-service/src/lib/services/saml2_service';
+import { logger } from '../../lib/core/logger';
+import { httpCommonFields } from '../../lib/core/logger_common';
+import { Request } from '../../lib/core/request';
+import '../../lib/services/saml2_service';
 
 @Service()
 @Controller('/saml2')

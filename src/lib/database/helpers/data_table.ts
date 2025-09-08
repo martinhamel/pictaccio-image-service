@@ -24,17 +24,17 @@ import { ObjectId } from 'typeorm/driver/mongodb/typings';
 import { SaveOptions } from 'typeorm/repository/SaveOptions';
 import { RemoveOptions } from 'typeorm/repository/RemoveOptions';
 import { DeleteResult } from 'typeorm/query-builder/result/DeleteResult';
-import { ConfigSchema } from '@pictaccio/image-service/src/core/config_schema';
-import { logger } from '@pictaccio/image-service/src/lib/core/logger';
-import { httpCommonFields } from '@pictaccio/image-service/src/lib/core/logger_common';
-import { Request } from '@pictaccio/image-service/src/lib/core/request';
-import { getMetadata, ModelMetadata } from '@pictaccio/image-service/src/lib/database/decorators/metadata';
-import { FileNotAllowedError } from '@pictaccio/image-service/src/lib/errors/file_not_allowed_error';
-import { InvalidFormatError } from '@pictaccio/image-service/src/lib/errors/invalid_format';
-import { DataTableCreateBaseRequest } from '@pictaccio/image-service/src/lib/http/requests/data_table_create_base_request';
-import { DataTableDeleteBaseRequest } from '@pictaccio/image-service/src/lib/http/requests/data_table_delete_base_request';
-import { DataTableReadBaseRequest } from '@pictaccio/image-service/src/lib/http/requests/data_table_read_base_request';
-import { DataTableUpdateBaseRequest } from '@pictaccio/image-service/src/lib/http/requests/data_table_update_base_request';
+import { ConfigSchema } from '../../../core/config_schema';
+import { logger } from '../../../lib/core/logger';
+import { httpCommonFields } from '../../../lib/core/logger_common';
+import { Request } from '../../../lib/core/request';
+import { getMetadata, ModelMetadata } from '../../../lib/database/decorators/metadata';
+import { FileNotAllowedError } from '../../../lib/errors/file_not_allowed_error';
+import { InvalidFormatError } from '../../../lib/errors/invalid_format';
+import { DataTableCreateBaseRequest } from '../../../lib/http/requests/data_table_create_base_request';
+import { DataTableDeleteBaseRequest } from '../../../lib/http/requests/data_table_delete_base_request';
+import { DataTableReadBaseRequest } from '../../../lib/http/requests/data_table_read_base_request';
+import { DataTableUpdateBaseRequest } from '../../../lib/http/requests/data_table_update_base_request';
 
 interface BaseEntityConstraint<T extends BaseEntity> {
     new(): T;

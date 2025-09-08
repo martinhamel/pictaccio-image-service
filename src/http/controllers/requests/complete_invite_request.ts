@@ -1,5 +1,5 @@
-import { IsEmail, IsUUID } from '@loufa/class-validator';
-import { Password } from '@pictaccio/image-service/src/lib/http/validators/password';
+import { IsEmail, IsUUID } from 'class-validator';
+import { Password } from '../../../lib/http/validators/password';
 
 export class CompleteInviteRequest {
     @IsUUID()

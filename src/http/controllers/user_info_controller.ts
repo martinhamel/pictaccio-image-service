@@ -1,14 +1,14 @@
-import { UploadAvatarRequest } from '@pictaccio/image-service/src/http/controllers/requests/upload_avatar_request';
+import { UploadAvatarRequest } from '../../http/controllers/requests/upload_avatar_request';
 import { Authorized, Body, CurrentUser, JsonController, Post, Req } from 'routing-controllers';
-import { UserInfoService } from '@pictaccio/image-service/src/lib/services/user_info_service';
+import { UserInfoService } from '../../lib/services/user_info_service';
 import { Inject, Service } from 'typedi';
-import { ConfigSchema } from '@pictaccio/image-service/src/core/config_schema';
-import { logger } from '@pictaccio/image-service/src/lib/core/logger';
-import { httpCommonFields } from '@pictaccio/image-service/src/lib/core/logger_common';
-import { Request } from '@pictaccio/image-service/src/lib/core/request';
-import "@pictaccio/image-service/src/lib/services/sendgrid_mailer_service";
-import { MailerInterface } from '@pictaccio/image-service/src/core/mailer_interface';
-import { UserInterface } from '@pictaccio/image-service/src/core/user_interface';
+import { ConfigSchema } from '../../core/config_schema';
+import { logger } from '../../lib/core/logger';
+import { httpCommonFields } from '../../lib/core/logger_common';
+import { Request } from '../../lib/core/request';
+import "../../lib/services/sendgrid_mailer_service";
+import { MailerInterface } from '../../core/mailer_interface';
+import { UserInterface } from '../../core/user_interface';
 
 
 @Service()

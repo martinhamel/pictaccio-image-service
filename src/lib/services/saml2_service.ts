@@ -1,7 +1,7 @@
 import { ServiceProvider, IdentityProvider } from 'saml2-js';
 import { Container, Service } from 'typedi';
-import { logger } from '@pictaccio/image-service/src/lib/core/logger';
-import { config } from '@pictaccio/image-service/src/config';
+import { logger } from '../../lib/core/logger';
+import { config } from '../../config';
 
 const serviceProvider = new ServiceProvider({
     entity_id: config.saml.serviceProviderEntityId,

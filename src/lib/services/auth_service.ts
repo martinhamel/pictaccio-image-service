@@ -1,20 +1,20 @@
-import { TokenData } from '@pictaccio/shared/src/types/token_data';
+import { TokenData } from '@pictaccio/shared/types/token_data';
 import { pbkdf2, randomBytes } from 'crypto';
 import { Secret, sign, verify, VerifyOptions } from 'jsonwebtoken';
 import { Service, Container } from 'typedi';
 import { authenticator } from 'otplib';
 import { promisify } from 'util';
-import { ConfigSchema } from '@pictaccio/image-service/src/core/config_schema';
-import { UserInterface } from '@pictaccio/image-service/src/core/user_interface';
-import { PublicReset } from '@pictaccio/image-service/src/database/models/public_reset';
-import { PublicUser, UserInfo, UserStatus } from '@pictaccio/image-service/src/database/models/public_user';
-import { logger } from '@pictaccio/image-service/src/lib/core/logger';
-import { InvalidResetCodeError } from '@pictaccio/image-service/src/lib/errors/invalid_reset_code_error';
-import { NotEnabledError } from '@pictaccio/image-service/src/lib/errors/not_enabled_error';
-import { UserExistError } from '@pictaccio/image-service/src/lib/errors/user_exist_error';
-import { UserNotFoundError } from '@pictaccio/image-service/src/lib/errors/user_not_found_error';
-import { WrongSecretError } from '@pictaccio/image-service/src/lib/errors/wrong_secret_error';
-import { WrongTOTPTokenError } from '@pictaccio/image-service/src/lib/errors/wrong_totp_token_error';
+import { ConfigSchema } from '../../core/config_schema';
+import { UserInterface } from '../../core/user_interface';
+import { PublicReset } from '../../database/models/public_reset';
+import { PublicUser, UserInfo, UserStatus } from '../../database/models/public_user';
+import { logger } from '../../lib/core/logger';
+import { InvalidResetCodeError } from '../../lib/errors/invalid_reset_code_error';
+import { NotEnabledError } from '../../lib/errors/not_enabled_error';
+import { UserExistError } from '../../lib/errors/user_exist_error';
+import { UserNotFoundError } from '../../lib/errors/user_not_found_error';
+import { WrongSecretError } from '../../lib/errors/wrong_secret_error';
+import { WrongTOTPTokenError } from '../../lib/errors/wrong_totp_token_error';
 
 const CURRENT_REV = 1;
 

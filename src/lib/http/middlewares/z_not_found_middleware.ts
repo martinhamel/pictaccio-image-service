@@ -3,10 +3,10 @@ import { NextFunction, Response } from 'express'
 import { promises as fs } from 'fs';
 import { join } from 'path';
 import { Inject, Service } from 'typedi';
-import { ConfigSchema } from '@pictaccio/image-service/src/core/config_schema';
-import { Request } from '@pictaccio/image-service/src/lib/core/request';
-import { logger } from '@pictaccio/image-service/src/lib/core/logger';
-import { httpCommonFields } from '@pictaccio/image-service/src/lib/core/logger_common';
+import { ConfigSchema } from '../../../core/config_schema';
+import { Request } from '../../../lib/core/request';
+import { logger } from '../../../lib/core/logger';
+import { httpCommonFields } from '../../../lib/core/logger_common';
 
 /**
  * Not found middleware. Needs to be loaded last, hence the Z. This will ensure that the request is properly answered

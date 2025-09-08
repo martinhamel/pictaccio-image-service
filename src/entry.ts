@@ -2,8 +2,8 @@ import 'reflect-metadata';
 import dotenv from 'dotenv';
 dotenv.config();
 
-import { bootstrap, onExit } from '@pictaccio/image-service/src/lib/bootstrap';
-import { logger } from '@pictaccio/image-service/src/lib/core/logger';
+import { bootstrap, onExit } from './lib/bootstrap';
+import { logger } from './lib/core/logger';
 
 function exitHandler(kind: string, exitCode: number | string, error: Error): void {
     switch (kind) {
@@ -41,16 +41,16 @@ onExit(exitHandler);
 /*
  * Load the app's modules
  */
-import { configLoader } from '@pictaccio/image-service/src/lib/loaders/config';
-import { grpcLoader } from '@pictaccio/image-service/src/lib/loaders/grpc';
-import { expressLoader } from '@pictaccio/image-service/src/lib/loaders/express';
-import { i18nextLoader } from '@pictaccio/image-service/src/lib/loaders/i18next';
-import { handlebarsLoader } from '@pictaccio/image-service/src/lib/loaders/handlebars';
-import { publicLoader } from '@pictaccio/image-service/src/lib/loaders/public';
-import { typediLoader } from '@pictaccio/image-service/src/lib/loaders/typedi';
-import { servicesLoader } from '@pictaccio/image-service/src/lib/loaders/services';
-import { typeormLoader } from '@pictaccio/image-service/src/lib/loaders/typeorm';
-import { schedulerLoader } from '@pictaccio/image-service/src/lib/loaders/scheduler';
+import { configLoader } from './lib/loaders/config';
+import { grpcLoader } from './lib/loaders/grpc';
+import { expressLoader } from './lib/loaders/express';
+import { i18nextLoader } from './lib/loaders/i18next';
+import { handlebarsLoader } from './lib/loaders/handlebars';
+import { publicLoader } from './lib/loaders/public';
+import { typediLoader } from './lib/loaders/typedi';
+import { servicesLoader } from './lib/loaders/services';
+import { typeormLoader } from './lib/loaders/typeorm';
+import { schedulerLoader } from './lib/loaders/scheduler';
 import { cache } from 'sharp';
 
 bootstrap([

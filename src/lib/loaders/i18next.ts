@@ -2,9 +2,9 @@ import { load } from 'js-yaml';
 import i18next, { getFixedT as i18nextGetFixedT, TFunction } from 'i18next';
 import Backend from 'i18next-fs-backend';
 import { Container } from 'typedi';
-import { ConfigSchema } from '@pictaccio/image-service/src/core/config_schema';
-import { LoaderInterface } from '@pictaccio/image-service/src/lib/bootstrap';
-import { logger } from '@pictaccio/image-service/src/lib/core/logger';
+import { ConfigSchema } from '../../core/config_schema';
+import { LoaderInterface } from '../../lib/bootstrap';
+import { logger } from '../../lib/core/logger';
 
 const loaded = [];
 

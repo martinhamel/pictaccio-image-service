@@ -1,6 +1,6 @@
 import { BaseEntity, Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import { AllowOnWire } from '@pictaccio/image-service/src/lib/database/decorators/allow_on_wire';
-import { NotFoundError } from '@pictaccio/image-service/src/lib/errors/not_found_error';
+import { AllowOnWire } from '../../lib/database/decorators/allow_on_wire';
+import { NotFoundError } from '../../lib/errors/not_found_error';
 
 export enum UserStatus {
     Ghost = 'ghost',

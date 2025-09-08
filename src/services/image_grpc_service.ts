@@ -1,15 +1,15 @@
 import { sendUnaryData, ServerUnaryCall, UntypedHandleCall } from '@grpc/grpc-js';
-import { IImageServer } from 'dist/lib/grpc-service-contracts/src/image-service/image_service_v1_grpc_pb';
+import { IImageServer } from '@pictaccio/grpc-service-contracts/image_service_v1_grpc_pb';
 import {
     ResizeRequest,
     ResizeResponse,
     SizeProfile,
     WatermarkedResizeRequest
-} from 'dist/lib/grpc-service-contracts/src/image-service/image_service_v1_pb';
-import { config } from '@pictaccio/image-service/src/config';
-import { logger } from '@pictaccio/image-service/src/lib/core/logger';
-import JobsService from '@pictaccio/image-service/src/lib/services/jobs_service';
-import { ImageResizeItem } from '@pictaccio/shared/src/types/image_resize_item';
+} from '@pictaccio/grpc-service-contracts/image_service_v1_pb';
+import { config } from '../config';
+import { logger } from '../lib/core/logger';
+import JobsService from '../lib/services/jobs_service';
+import { ImageResizeItem } from '@pictaccio/shared/types/image_resize_item';
 import { join } from 'node:path';
 import sharp from 'sharp';
 import { Container, Service } from 'typedi';

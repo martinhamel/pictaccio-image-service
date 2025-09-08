@@ -1,8 +1,8 @@
 import { Container, Service } from 'typedi';
-import { MailerInterface, MailerItem } from '@pictaccio/image-service/src/core/mailer_interface';
+import { MailerInterface, MailerItem } from '../../core/mailer_interface';
 import sendgrid from '@sendgrid/mail';
-import { logger } from '@pictaccio/image-service/src/lib/core/logger';
-import { config } from '@pictaccio/image-service/src/config';
+import { logger } from '../../lib/core/logger';
+import { config } from '../../config';
 
 sendgrid.setApiKey(config.sendgrid.apikey);
 

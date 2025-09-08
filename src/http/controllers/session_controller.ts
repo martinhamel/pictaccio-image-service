@@ -3,11 +3,11 @@ import { changeLanguage } from 'i18next';
 import { Inject, Service } from 'typedi';
 import { Body, Get, JsonController, Post, Res, Session } from 'routing-controllers';
 import { ResponseSchema } from 'routing-controllers-openapi';
-import { ConfigSchema } from '@pictaccio/image-service/src/core/config_schema';
-import { SessionInterface } from '@pictaccio/image-service/src/core/session_interface';
-import { SessionGetLangResponse } from '@pictaccio/image-service/src/http/controllers/responses/session_get_lang_response';
-import { SessionPostLangResponse } from '@pictaccio/image-service/src/http/controllers/responses/session_post_lang_response';
-import { SessionPostLangRequest } from '@pictaccio/image-service/src/http/controllers/requests/session_post_lang_request';
+import { ConfigSchema } from '../../core/config_schema';
+import { SessionInterface } from '../../core/session_interface';
+import { SessionGetLangResponse } from '../../http/controllers/responses/session_get_lang_response';
+import { SessionPostLangResponse } from '../../http/controllers/responses/session_post_lang_response';
+import { SessionPostLangRequest } from '../../http/controllers/requests/session_post_lang_request';
 
 @Service()
 @JsonController('/session')

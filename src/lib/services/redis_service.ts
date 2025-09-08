@@ -1,9 +1,9 @@
 import { Inject, Service } from 'typedi';
 import { createClient } from 'redis';
 import { RedisClientType } from '@node-redis/client';
-import { ConfigSchema } from '@pictaccio/image-service/src/core/config_schema';
-import { logger } from '@pictaccio/image-service/src/lib/core/logger';
-import { config } from '@pictaccio/image-service/src/config';
+import { ConfigSchema } from '../../core/config_schema';
+import { logger } from '../../lib/core/logger';
+import { config } from '../../config';
 
 @Service('redis')
 export class RedisService {

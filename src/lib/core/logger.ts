@@ -1,5 +1,5 @@
-import { config } from '@pictaccio/image-service/src/config';
-import { HttpCollectorTransport } from '@pictaccio/image-service/src/lib/core/http_collector_transport';
+import { config } from '../../config';
+import { HttpCollectorTransport } from '../../lib/core/http_collector_transport';
 import { hostname } from 'node:os';
 import { createLogger, format, Logger as WinstonLogger, transports } from 'winston';
 
