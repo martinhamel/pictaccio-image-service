@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{__head_title__}}</title>
+    <script src="{{prefixPath "script" "bundle.min.js"}}"></script>
+    {{#each __head_scripts__}}
+    <script src="{{prefixPath "script" name}}" {{#if async}}async{{/if}} {{#if defer}}defer{{/if}}></script>
+    {{/each}}
+    <link rel="stylesheet" type="text/css" href="{{prefixPath "css" "app.css"}}" media="screen">
+
+</head>
+<body style="display: none;">
+    {{{body}}}
+</body>
+</html>

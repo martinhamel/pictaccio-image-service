@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: image-service-config
+data:
+  DB_TYPE: "postgres"
+  DB_HOST: "database-service"
+  DB_PORT: "5432"
+  DB_USERNAME: "psql_admin"
+  DB_DATABASE_NAME: "pictaccio"
+  REDIS_HOST: "redis-service"
+  REDIS_PORT: "6379"
+  RPC_IMAGE_SERVICE_SERVER_INTERFACE: "0.0.0.0"
+  RPC_IMAGE_SERVICE_SERVER_LISTEN: "50051"
+  PUBLIC_DIR: "../../../public"
+  INSTANCE_ID: "pictaccio-beta"
+  APP_LOGGING_HTTP_HOST: "10.1.208.127"
+  APP_LOGGING_HTTP_PORT: "8080"
+  APP_LOGGING_HTTP_TOKEN: ""
+---

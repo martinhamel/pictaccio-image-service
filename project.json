@@ -1,0 +1,104 @@
+{
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "name": "image-service",
+    "sourceRoot": "app/image-service/src",
+    "projectType": "application",
+
+    "targets": {
+        "compile": {
+            "dependsOn": [
+                {
+                    "projects": ["typescript-transform-path-rewrite", "grpc-service-contracts", "loufairy", "loufairy-server", "shared"],
+                    "target": "build"
+                }
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "nx run image-service:build",
+                "parallel": false
+            },
+            "configurations": {
+                "production": {
+                    "command": "nx run image-service:build --configuration=production"
+                }
+            }
+        },
+
+        "build": {
+            "dependsOn": [
+                {
+                    "projects": ["typescript-transform-path-rewrite", "grpc-service-contracts", "shared"],
+                    "target": "build"
+                }
+            ],
+            "executor": "@nx/js:tsc",
+            "options": {
+                "main": "{projectRoot}/src/entry.ts",
+                "outputPath": "{workspaceRoot}/dist/app/image-service",
+                "tsConfig": "{projectRoot}/tsconfig.json",
+                "clean": false
+            },
+            "configurations": {
+                "production": {
+                    "outputPath": "{workspaceRoot}/../app/app/image-service"
+                }
+            }
+        },
+
+        "docker-build-alpha": {
+            "executor": "nx:run-script",
+            "options": {
+                "script": "build:docker:alpha"
+            }
+        },
+
+        "docker-build-beta": {
+            "executor": "nx:run-script",
+            "options": {
+                "script": "build:docker:beta"
+            }
+        },
+
+        "docker-build-prod": {
+            "executor": "nx:run-script",
+            "options": {
+                "script": "build:docker:prod"
+            }
+        },
+
+        "docker-build-winter24": {
+            "executor": "nx:run-script",
+            "options": {
+                "script": "build:docker:winter24"
+            }
+        },
+
+        "docker-build-test": {
+            "executor": "nx:run-script",
+            "options": {
+                "script": "build:docker:test"
+            }
+        },
+
+        "lint": {
+            "executor": "nx:run-script",
+            "options": {
+                "script": "lint"
+            }
+        },
+
+        "test": {
+            "executor": "nx:run-script",
+            "options": {
+                "script": "test"
+            }
+        },
+
+        "clean": {
+            "executor": "nx:run-script",
+            "options": {
+                "script": "clean"
+            }
+        }
+    }
+}

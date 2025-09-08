@@ -1,0 +1,100 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: image-service
+  labels:
+    app: pictaccio
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+spec:
+  type: LoadBalancer
+  loadBalancerSourceRanges:
+    - 10.0.250.0/24
+    - 10.8.0.0/24
+    - 10.0.255.0/24
+  ports:
+    - port: 3000
+      protocol: TCP
+      name: ctrl-http
+    - port: 50051
+      protocol: TCP
+      name: grpc-http2
+    - port: 9229
+      protocol: TCP
+      name: dbg-node
+  selector:
+    role: image-service
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: image
+  labels:
+    app: pictaccio
+    role: image-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pictaccio
+  template:
+    metadata:
+      labels:
+        app: pictaccio
+        role: image-service
+    spec:
+      containers:
+        - name: image
+          image: {{ !-! TODO: WITH YOUR DOMAIN -! }}/pictaccio-image-service-beta
+          imagePullPolicy: Always
+          resources:
+            limits:
+              cpu: 300m
+              memory: 1.5Gi
+#          livenessProbe:
+#            exec:
+#              command:
+#                - /bin/bash
+#                - -c
+#                - "[ $(curl -LI http:/localhost:3000/test/ -o /dev/null -w '%{http_code}\n' -s) == '200' ] && exit 0 || exit -1"
+#            initialDelaySeconds: 180
+#            periodSeconds: 30
+#          readinessProbe:
+#            exec:
+#              command:
+#                - /bin/bash
+#                - -c
+#                - "[ $(curl -LI http:/localhost:3000/test/ -o /dev/null -w '%{http_code}\n' -s) == '200' ] && exit 0 || exit -1"
+#            initialDelaySeconds: 120
+#            periodSeconds: 5
+          command: [ "node", "--inspect=0.0.0.0:9229", "/app/app/image-service/src/entry.js" ]
+          ports:
+            - containerPort: 3000
+            - containerPort: 9229
+            - containerPort: 50051
+          volumeMounts:
+            - name: public-files
+              mountPath: /app/public
+              subPath: app/pictaccio/public/beta/
+            - name: pictaccio-log
+              mountPath: /app/log
+          envFrom:
+            - configMapRef:
+                name: image-service-config
+            - secretRef:
+                name: pictaccio-secrets
+          securityContext:
+            allowPrivilegeEscalation: false
+            runAsNonRoot: true
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop:
+                - ALL
+      volumes:
+        - name: public-files
+          persistentVolumeClaim:
+            claimName: aks-smb-pvc
+        - name: pictaccio-log
+          emptyDir: { }
+      imagePullSecrets:
+        - name: {{ !-! TODO: WITH YOUR IMAGE PULL SECRETS -! }}

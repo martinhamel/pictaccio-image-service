@@ -1,0 +1,4 @@
+dist/
+docs/
+../image-service/node_modules/
+test/
