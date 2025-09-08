@@ -1,0 +1,1 @@
+{"version":3,"file":"file_not_allowed_error.js","sourceRoot":"","sources":["../../../../src/lib/errors/file_not_allowed_error.ts"],"names":[],"mappings":";;;AAAA,MAAa,mBAAoB,SAAQ,KAAK;IAC1C,YAAY,OAAgB;QACxB,KAAK,CAAC,OAAO,CAAC,CAAC;QACf,MAAM,CAAC,cAAc,CAAC,IAAI,EAAE,GAAG,CAAC,MAAM,CAAC,SAAS,CAAC,CAAC;QAClD,IAAI,CAAC,IAAI,GAAG,mBAAmB,CAAC,IAAI,CAAC;IACzC,CAAC;CACJ;AAND,kDAMC"}

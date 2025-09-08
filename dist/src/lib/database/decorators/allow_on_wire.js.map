@@ -1,0 +1,1 @@
+{"version":3,"file":"allow_on_wire.js","sourceRoot":"","sources":["../../../../../src/lib/database/decorators/allow_on_wire.ts"],"names":[],"mappings":";;AAGA,kCAGC;AALD,wEAAwE;AAExE,SAAgB,WAAW,CAAC,MAAW,EAAE,WAAmB;IACxD,MAAM,aAAa,GAAG,IAAA,sBAAW,EAAC,MAAM,CAAC,WAAW,CAAC,CAAC;IACtD,aAAa,CAAC,aAAa,CAAC,IAAI,CAAC,WAA+B,CAAC,CAAC;AACtE,CAAC"}

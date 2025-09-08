@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataTableDeleteBaseRequest = void 0;
+const tslib_1 = require("tslib");
+const class_validator_1 = require("class-validator");
+class DataTableDeleteBaseRequest {
+    filters;
+}
+exports.DataTableDeleteBaseRequest = DataTableDeleteBaseRequest;
+tslib_1.__decorate([
+    (0, class_validator_1.ValidateNested)({ each: true }),
+    (0, class_validator_1.IsOptional)(),
+    tslib_1.__metadata("design:type", Array)
+], DataTableDeleteBaseRequest.prototype, "filters", void 0);
+//# sourceMappingURL=data_table_delete_base_request.js.map
